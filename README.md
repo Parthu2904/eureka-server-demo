@@ -1,18 +1,27 @@
-# eureka-server-demo
-Service registry using Netflix Eureka to enable discovery among microservices.
-# 🛰️ Eureka Server Demo
+# data-platform-eureka-registry
 
-A lightweight **service discovery server** to register and locate microservices.
 
-### ⚙️ Stack
-- Spring Boot 3  
-- Netflix Eureka  
+Centralized Metadata & Service Registry for Distributed Data Pipelines
 
-### 💡 Highlights
-- Centralized registry  
-- Works with Feign clients  
-- Easy local microservice setup  
 
-### ▶️ Run
+This repository provides a resilient service-discovery and metadata registry used by data platform microservices. It is intended to be the backbone for coordinating distributed ETL/ELT services, ingestion workers, schema/metadata services, and control-plane microservices.
+
+
+## Key Features
+- High-availability service registry for data microservices
+- Health-check and management endpoints for operational visibility
+- Designed to support scaling data ingestion, processing, and serving layers
+
+
+## Tech & Integrations
+- Spring Boot
+- Netflix Eureka (service registry pattern)
+- Prometheus / Micrometer compatible metrics
+- Works with Kubernetes, Docker, and Cloud deployments
+
+
+## Getting Started (local)
+1. Build and run with Maven:
 ```bash
-mvn spring-boot:run
+mvn clean package
+java -jar target/registry-0.0.1-SNAPSHOT.jar
